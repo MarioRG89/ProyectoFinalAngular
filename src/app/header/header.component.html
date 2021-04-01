@@ -11,20 +11,17 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
-          Productos
-        </a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Procesadores</a>
-          <a class="dropdown-item" href="#">Tarjetas gráficas</a>
-          <a class="dropdown-item" href="#">Placas base</a>
-          <a class="dropdown-item" href="#">RAM</a>
-          <a class="dropdown-item" href="#">Cajas/Torres</a>
+      <li ngbDropdown  class="nav-item dropdown">
+        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Productos</button>
+        <div ngbDropdownMenu   class="dropdown-menu">
+          <a class="dropdown-item" ngbDropdownItem href="#">Procesadores</a>
+          <a class="dropdown-item" ngbDropdownItem href="#">Tarjetas gráficas</a>
+          <a class="dropdown-item" ngbDropdownItem href="#">Placas base</a>
+          <a class="dropdown-item" ngbDropdownItem href="#">RAM</a>
+          <a class="dropdown-item" ngbDropdownItem href="#">Cajas/Torres</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Teclados</a>
-          <a class="dropdown-item" href="#">Ratones</a>
+          <a class="dropdown-item" ngbDropdownItem href="#">Teclados</a>
+          <a class="dropdown-item" ngbDropdownItem href="#">Ratones</a>
         </div>
       </li>
 
