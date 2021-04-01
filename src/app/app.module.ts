@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutUsComponent } from './header/about-us/about-us.component';
 import { ContactUsComponent } from './header/contact-us/contact-us.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CarouselComponent } from './inicio/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { ContactUsComponent } from './header/contact-us/contact-us.component';
     HeaderComponent,
     FooterComponent,
     AboutUsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
