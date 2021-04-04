@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlacasBaseComponent implements OnInit {
 
+  componentes: string[] = ["msi", "asus", "aorus"];
+
   constructor() { }
 
   ngOnInit(): void {
