@@ -9,29 +9,29 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link"[routerLink]="['/inicio']">Home <span class="sr-only">(current)</span></a>
       </li>
       
       <li ngbDropdown  class="nav-item dropdown">
         <a class="btn" id="dropdownBasic1" ngbDropdownToggle>Productos</a>
         <div ngbDropdownMenu   class="dropdown-menu">
-          <a class="dropdown-item" ngbDropdownItem href="#">Procesadores</a>
-          <a class="dropdown-item" ngbDropdownItem href="#">Tarjetas gráficas</a>
-          <a class="dropdown-item" ngbDropdownItem href="#">Placas base</a>
-          <a class="dropdown-item" ngbDropdownItem href="#">RAM</a>
-          <a class="dropdown-item" ngbDropdownItem href="#">Cajas/Torres</a>
+          <a class="dropdown-item" ngbDropdownItem [routerLink]="['/procesadores']" routerLinkActive="router-link-active" >Procesadores</a>
+          <a class="dropdown-item" ngbDropdownItem [routerLink]="['/tarjetasgraficas']">Tarjetas gráficas</a>
+          <a class="dropdown-item" ngbDropdownItem [routerLink]="['/placasbase']">Placas base</a>
+          <a class="dropdown-item" ngbDropdownItem [routerLink]="['/ram']">RAM</a>
+          <a class="dropdown-item" ngbDropdownItem [routerLink]="['/cajas']">Cajas/Torres</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" ngbDropdownItem href="#">Teclados</a>
-          <a class="dropdown-item" ngbDropdownItem href="#">Ratones</a>
+          <a class="dropdown-item" ngbDropdownItem [routerLink]="['/teclados']">Teclados</a>
+          <a class="dropdown-item" ngbDropdownItem [routerLink]="['/ratones']">Ratones</a>
         </div>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">About us</a>
+        <a class="nav-link" [routerLink]="['/about']">About us</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">Contact us</a>
+        <a class="nav-link" [routerLink]="['/contacto']">Contact us</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
