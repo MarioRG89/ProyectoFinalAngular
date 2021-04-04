@@ -1,8 +1,9 @@
 <nav class="navbar navbar-expand-lg">
   <a class="navbar-brand" href="#">ArdKalic</a>
 
-  
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -11,10 +12,10 @@
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
-      
-      <li ngbDropdown  class="nav-item dropdown">
+
+      <li ngbDropdown class="nav-item dropdown">
         <a class="btn" id="dropdownBasic1" ngbDropdownToggle>Productos</a>
-        <div ngbDropdownMenu   class="dropdown-menu">
+        <div ngbDropdownMenu class="dropdown-menu">
           <a class="dropdown-item" ngbDropdownItem href="#">Procesadores</a>
           <a class="dropdown-item" ngbDropdownItem href="#">Tarjetas gráficas</a>
           <a class="dropdown-item" ngbDropdownItem href="#">Placas base</a>
@@ -38,5 +39,35 @@
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
+    <button class="btn btn-outline-primary" id="inicioSesion" (click)="open(content)">Iniciar sesión</button>
+
+    <!-- Modal -->
+
+    <ng-template #content let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Inicia sesión</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="usuario">Usuario: </label> <br>
+            <input type="text" class="form-control">
+
+            <label for="contraseña">Contraseña: </label> <br>
+            <input type="text" class="form-control">
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('login')">Iniciar sesión</button>
+      </div>
+    </ng-template>
+  
   </div>
+
 </nav>
