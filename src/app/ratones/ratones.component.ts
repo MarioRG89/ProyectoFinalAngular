@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PeticionesService } from '../servicios/peticiones.service';
 
 @Component({
   selector: 'app-ratones',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ratones.component.css']
 })
 export class RatonesComponent implements OnInit {
-
-  constructor() { }
+  ratones:any;
+  constructor(private peticion:PeticionesService) { }
 
   ngOnInit(): void {
+    this.listaRatones();
   }
+    
 
+  listaRatones(){
+    this.peticion.getRatones().subscribe(data=>{
+     console.log(data);
+     this.ratones=data;
+     console.log(this.ratones);
+    })
+   
+  }
 }

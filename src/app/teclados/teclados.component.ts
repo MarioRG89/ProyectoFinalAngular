@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PeticionesService } from '../servicios/peticiones.service';
 
 @Component({
   selector: 'app-teclados',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./teclados.component.css']
 })
 export class TecladosComponent implements OnInit {
-
-  constructor() { }
+  teclados:any;
+  constructor(private peticion:PeticionesService) { }
 
   ngOnInit(): void {
+    this.listaTeclados();
   }
-
+  
+  
+  listaTeclados(){
+    this.peticion.getTeclados().subscribe(data=>{
+     this.teclados=data;
+     console.log(this.teclados);
+    })
+   
+  }
 }

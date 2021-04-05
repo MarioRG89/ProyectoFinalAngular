@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PeticionesService } from '../servicios/peticiones.service';
 
 @Component({
   selector: 'app-tarjetas-graficas',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TarjetasGraficasComponent implements OnInit {
 
-  constructor() { }
+  graficas:any;
+  constructor(private peticion:PeticionesService) { }
 
   ngOnInit(): void {
+    this.listaGraficas();
   }
-
+  
+  
+  listaGraficas(){
+    this.peticion.getGraficas().subscribe(data=>{
+     this.graficas=data;
+     console.log(this.graficas);
+    })
+   
+  }
 }
